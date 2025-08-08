@@ -1,0 +1,22 @@
+package com.quiz.microservice.entity;
+
+public class Question {
+	
+	private Long qId;
+	private String question;
+	private Long quizId;
+	transient private List<Question> questiondup;
+	
+	public Question(Long qId, String question, Long quizId) {
+		this.qId = qId;
+		this.question = question;
+		this.quizId = quizId;
+	}
+
+	public Question() {
+		super();
+	}
+	 
+	
+	
+}

@@ -1,0 +1,36 @@
+package com.quiz.microservice.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.quiz.microservice.entity.Quiz;
+import com.quiz.microservice.repositories.Quizrepo;
+
+@Service
+public class QuizImpementation implements QuizService {
+	
+	@Autowired
+	private Quizrepo quizrepo;
+	
+	@Autowired
+	private QuestionClient questionclient;
+
+	@Override
+	public Quiz add(Quiz q) {
+	
+		return quizrepo.save(q);
+	}
+
+	@Override
+	public List<Quiz> getAll() {
+		return quizrepo.findAll();
+	}
+
+	@Override
+	public Quiz getById(Long id) {
+		return quizrepo.findById(id).orElseThrow(()->new RuntimeException("Invalid ID"));
+	}
+
+}

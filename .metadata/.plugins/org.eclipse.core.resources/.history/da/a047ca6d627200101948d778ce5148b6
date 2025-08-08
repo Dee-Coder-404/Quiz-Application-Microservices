@@ -1,0 +1,27 @@
+package com.quiz.microservice.service;
+
+import java.util.List;
+
+import com.quiz.microservice.entity.Quiz;
+
+public class QuizImpementation implements QuizService {
+
+	@Override
+	public Quiz add(Quiz q) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Quiz> getAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Quiz getById(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

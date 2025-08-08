@@ -1,0 +1,27 @@
+package com.question.microservice.service;
+
+import java.util.List;
+
+import com.question.microservice.entity.Question;
+import com.question.microservice.entity.*;
+public class QuestionImp implements QuestionService {
+
+	@Override
+	public Question create(Question question) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Question> getAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Question getById(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

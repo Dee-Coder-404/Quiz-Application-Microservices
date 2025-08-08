@@ -1,0 +1,24 @@
+spring.application.name=RegistryService
+
+server.port=8761
+
+# Enable Thymeleaf
+spring.thymeleaf.prefix=classpath:/templates/
+spring.thymeleaf.suffix=.html
+
+#to disabe to be react as client and only act as server we need to disable
+eureka.client.register-with-eureka=false
+eureka.client.fetch-registry=false
+
+# PostgreSQL DB connection
+spring.datasource.url=jdbc:postgresql://localhost:5432/microservice
+spring.datasource.username=postgres
+spring.datasource.password=9030
+
+# PostgreSQL driver (usually auto-detected)
+spring.datasource.driver-class-name=org.postgresql.Driver
+
+# JPA/Hibernate settings (optional but common)
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect

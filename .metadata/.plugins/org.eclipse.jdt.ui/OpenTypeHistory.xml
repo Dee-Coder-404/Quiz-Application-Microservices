@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+    <typeInfo handle="=QuizService/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.quiz.microservice.service{QuizService.java[QuizService" modifiers="513" timestamp="1754442552012"/>
+    <typeInfo handle="=QuestionService/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.question.microservice.service{QuestionService.java[QuestionService" modifiers="513" timestamp="1754469099154"/>
+    <typeInfo handle="=Quiz.Application/C:\/Users\/darkd\/.m2\/repository\/org\/springframework\/data\/spring-data-jpa\/3.5.2\/spring-data-jpa-3.5.2.jar=/maven.pomderived=/true=/=/maven.groupId=/org.springframework.data=/=/maven.artifactId=/spring-data-jpa=/=/maven.version=/3.5.2=/=/maven.scope=/compile=/=/maven.pomderived=/true=/&lt;org.springframework.data.jpa.repository(JpaRepository.class[JpaRepository" modifiers="1537" timestamp="1753889832028"/>
+</typeInfoHistroy>

@@ -1,0 +1,12 @@
+package com.quiz.microservice.entity;
+
+import lombok.Data;
+
+@Data
+public class Question {
+	
+	private Long qId;
+	private String question;
+	private Long quizId;
+	 
+}

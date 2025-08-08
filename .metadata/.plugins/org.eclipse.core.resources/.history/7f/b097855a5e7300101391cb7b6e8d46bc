@@ -1,0 +1,7 @@
+package com.example.demooo.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CustomerRepo extends JpaRepository<T, ID> {
+
+}

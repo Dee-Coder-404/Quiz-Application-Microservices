@@ -1,0 +1,19 @@
+package com.example.demooo.Exception;
+
+import java.time.LocalDateTime;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+
+public class MyExceptions {
+	
+	@ExceptionHandler
+	public ResponseEntity<Exceptioninfo> teachernotfound(TeacherNotFoundException teach){
+		Exceptioninfo info=new Exceptioninfo();
+		info.setCode("EXCP222");
+		info.setMessage("Teacher Not Found Exception");
+		info.setLocaldate(""+LocalDateTime.now());
+		return new ResponseEntity<Exceptioninfo>(info, HttpStatus.BAD_REQUEST);
+	}
+}

@@ -1,0 +1,29 @@
+package com.question.microservice.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.question.microservice.entity.Question;
+import com.question.microservice.repositories.QuestionRepo;
+public class QuestionImp implements QuestionService {
+	
+	@Autowired
+	private QuestionRepo questionrepo;
+	
+	@Override
+	public Question create(Question question) {
+		return questionrepo.save(question);
+	}
+
+	@Override
+	public List<Question> getAll() {
+		return questionrepo.findAll();
+	}
+
+	@Override
+	public Question getById(Long id) {
+		return questionrepo.findById(id).orElseThrow(()->new RuntimeException("Question Id is invalid"));
+	}
+
+}

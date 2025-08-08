@@ -1,0 +1,5 @@
+package com.question.microservice.service;
+
+public class QuestionService {
+
+}

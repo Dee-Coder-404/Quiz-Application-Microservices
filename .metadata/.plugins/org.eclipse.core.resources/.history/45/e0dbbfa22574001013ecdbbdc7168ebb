@@ -1,0 +1,16 @@
+package com.quiz.microservice.service;
+
+import java.util.List;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import com.quiz.microservice.entity.Question;
+
+@FeignClient(name="QUESTION-SERVICE", value="Question-Client")
+public interface QuestionClient {
+	
+	@GetMapping("/questionmicro/getbyquiz/{quizid}")
+	List<Question> getQuestionsOfQuiz(@PathVariable Long quizid);
+}

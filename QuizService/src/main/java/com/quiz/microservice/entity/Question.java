@@ -1,0 +1,42 @@
+package com.quiz.microservice.entity;
+
+public class Question {
+	
+	private Long qId;
+	private String question;
+	private Long quizId;
+	
+	public Question(Long qId, String question, Long quizId) {
+		this.qId = qId;
+		this.question = question;
+		this.quizId = quizId;
+	}
+
+	public Question() {
+		super();
+	}
+
+	public Long getqId() {
+		return qId;
+	}
+
+	public void setqId(Long qId) {
+		this.qId = qId;
+	}
+
+	public String getQuestion() {
+		return question;
+	}
+
+	
+
+	public Long getQuizId() {
+		return quizId;
+	}
+
+	public void setQuizId(Long quizId) {
+		this.quizId = quizId;
+	}
+	
+	
+}

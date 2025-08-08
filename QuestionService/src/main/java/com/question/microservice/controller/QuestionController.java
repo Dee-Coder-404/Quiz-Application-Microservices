@@ -1,0 +1,42 @@
+package com.question.microservice.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.question.microservice.entity.Question;
+import com.question.microservice.service.QuestionService;
+
+@RestController
+@RequestMapping("/questionmicro")
+public class QuestionController {
+	
+	@Autowired
+	private QuestionService questionservice;
+	
+	@PostMapping("/create")
+	public Question create(@RequestBody Question question) {
+		return questionservice.create(question);
+	}
+	
+	@GetMapping("/findAll")
+	public List<Question> getAll(){
+		return questionservice.getAll();
+	}
+	
+	@GetMapping("/{id}")
+	public Question getById(@PathVariable Long id) {
+		return questionservice.getById(id);
+	}
+	
+	@GetMapping("/getbyquiz/{quizid}")
+	public List<Question> getByQuizId(@PathVariable Long quizid){
+		return questionservice.getByQuizId(quizid);
+	}
+}

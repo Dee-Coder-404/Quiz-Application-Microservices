@@ -1,0 +1,5 @@
+package com.quiz.microservice.service;
+
+public interface QuizService {
+
+}
